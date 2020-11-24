@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Register from '../../features/Auth/components/Register';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -64,26 +65,12 @@ export default function Header() {
 
 
       <Dialog disableBackdropClick={true} disableEscapeKeyDown={true} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Register</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            Lorem ipsum
-          </DialogContentText>
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
-            fullWidth
-          />
+          <Register></Register>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
           </Button>
         </DialogActions>
       </Dialog>
